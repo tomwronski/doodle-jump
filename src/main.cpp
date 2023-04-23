@@ -1,21 +1,10 @@
-#include <SFML/Graphics.hpp>
+#include "Game.hpp"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(320, 512), "Doodle Jump");
-    window.setFramerateLimit(60);
+    Game game;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    game.run();
 
-        window.clear();
-
-        window.display();
-    }
+    return 0;
 }

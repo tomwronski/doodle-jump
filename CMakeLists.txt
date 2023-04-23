@@ -15,7 +15,7 @@ if(NOT CMAKE_BUILD_TYPE)
     )
 endif()
 
-set(RESOURCE_PATH ${PROJECT_SOURCE_DIR}/assets)
+set(RESOURCE_PATH ${PROJECT_SOURCE_DIR}/assets/)
 
 # Generate config.h
 configure_file(include/config.h.in config.h)
@@ -26,6 +26,7 @@ find_package(SFML 2.5
 )
 
 add_executable(${PROJECT_NAME}
+    src/Game.cpp
     src/main.cpp
 )
 
